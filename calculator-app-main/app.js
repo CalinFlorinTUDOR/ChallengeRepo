@@ -88,7 +88,7 @@ function placeCommas(chain) {
         for (let i = chain.length - 1, counter = 0; i >= 0; i--) {
         chainWithComma = chain[i] + chainWithComma
         counter++
-        // Insertar una coma después de cada grupo de tres dígitos
+        // Insert a comma after every three digits
             if (counter === 3 && i !== 0) {
                 chainWithComma = "," + chainWithComma
                 counter = 0
@@ -156,7 +156,7 @@ function showWithCommas(value) {
     return result
 }
 
-/*SELECCIONAR COLOR*/
+/*Select color*/
 let main = document.getElementById('main')
 let selectColor = document.getElementById('select-color')
 let theme = document.getElementById('theme')
