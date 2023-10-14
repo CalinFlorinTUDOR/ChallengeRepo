@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="100x100" href="./images/favicon-100x100.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculator</title>
+</head>
+<body>
+  <main id="main" class="main">
+    <div class="calc-container">
+      <!--Section1-->
+      <section class="theme-container">
+        <div class="section1">
+          <p>calc</p>
+        </div>
+        <div class="section2">
+          <p class="nums">1 2 3</p>
+          <div class="select-theme">
+            <p id="theme" class="theme">THEME</p>
+            <input id="select-color" type="range" name="range" min="1" max="3" value="1" class="color-theme">
+          </div>
+        </div>
+      </section>
+      <!--Section2-->
+      <section class="result-container">
+        <p id="result" class="result">0</p>
+      </section>
+      <!--Section3-->
+      <section id="numsContainer" class="nums-container">
+        <div class="nums">
+          <p>7</p>
+        </div>
+        <div class="nums">
+          <p>8</p>
+        </div>
+        <div class="nums">
+          <p>9</p>
+        </div>
+        <div class="text">
+          <p>DEL</p>
+        </div>
+        <div class="nums">
+          <p>4</p>
+        </div>
+        <div class="nums">
+          <p>5</p>
+        </div>
+        <div class="nums">
+          <p>6</p>
+        </div>
+        <div class="nums">
+          <p>+</p>
+        </div>
+        <div class="nums">
+          <p>1</p>
+        </div>
+        <div class="nums">
+          <p>2</p>
+        </div>
+        <div class="nums">
+          <p>3</p>
+        </div>
+        <div class="nums">
+          <p>-</p>
+        </div>
+        <div class="nums">
+          <p>.</p>
+        </div>
+        <div class="nums">
+          <p>0</p>
+        </div>
+        <div class="nums">
+          <p>/</p>
+        </div>
+        <div class="nums">
+          <p>x</p>
+        </div>
+        <div class="text reset">
+          <p>RESET</p>
+        </div>
+        <div class="equal">
+          <p>=</p>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>
