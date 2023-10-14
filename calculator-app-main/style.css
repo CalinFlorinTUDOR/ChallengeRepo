@@ -1,0 +1,322 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root{
+                  /*Theme 1*/
+  /*Backgrounds*/
+  --very-dark-desaturated-blue-1:hsl(222, 26%, 31%);
+  --very-dark-desaturated-blue-2:hsl(223, 31%, 20%);
+  --very-dark-desaturated-blue-3:hsl(224, 36%, 15%);
+  /*Keys*/
+  --desaturated-dark-blue-1: hsl(225, 21%, 49%);
+  --desaturated-dark-blue-2: hsl(224, 28%, 35%);
+  --red: hsl(6, 63%, 50%);
+  --dark-red: hsl(6, 70%, 34%);
+  --light-grayish-orange: hsl(30, 25%, 89%);
+  --grayish-orange: hsl(28, 16%, 65%);
+  /*Text*/
+  --very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --white: hsl(0, 0%, 100%);
+
+                  /*Theme 2*/
+  /*Backgrounds*/
+  --light-gray: hsl(0, 0%, 90%);
+  --grayish-red: hsl(0, 5%, 81%);
+  --very-light-gray: hsl(0, 0%, 93%);
+  /*Keys*/
+  --dark-moderate-cyan: hsl(185, 42%, 37%);
+  --Very-dark-cyan: hsl(185, 58%, 25%);
+  --orange: hsl(25, 98%, 40%);
+  --dark-orange: hsl(25, 99%, 27%);
+  --light-grayish-yellow: hsl(45, 7%, 89%);
+  --dark-grayish-orange: hsl(35, 11%, 61%);
+  /*Text*/
+  --very-dark-grayish-yellow: hsl(60, 10%, 19%);
+  --white: hsl(0, 0%, 100%);
+
+                  /*Theme 3*/
+  /*Backgrounds*/
+  --very-dark-violet-1: hsl(268, 75%, 9%);
+  --very-dark-violet-2: hsl(268, 71%, 12%);
+  /*Keys*/
+  --dark-violet: hsl(281, 89%, 26%);
+  --vivid-magenta: hsl(285, 91%, 52%);
+  --pure-cyan: hsl(176, 100%, 44%);
+  --soft-cyan: hsl(177, 92%, 70%);
+  --very-dark-violet: hsl(268, 47%, 21%);
+  --dark-magenta: hsl(290, 70%, 36%);
+  /*Text*/
+  --light-yellow: hsl(52, 100%, 62%);
+  --very-dark-blue: hsl(198, 20%, 13%);
+  --white: hsl(0, 0%, 100%);
+}
+html{
+  font-family: 'League Spartan', sans-serif;
+}
+main{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--very-dark-desaturated-blue-1);
+} 
+main .calc-container{
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--very-dark-desaturated-blue-1);
+  padding: 25px;
+}
+
+/*SECTION 1*/
+main .calc-container .theme-container{
+  display: flex;   
+  color: var(--white);
+  height: 75px;
+}
+main .calc-container .theme-container .section1{
+  width: 50%;
+}
+main .calc-container .theme-container .section1 p{
+  font-size: 32px;
+  margin-top: 10px;
+}
+main .calc-container .theme-container .section2{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+main .calc-container .theme-container .section2 .nums{
+  font-size: 12px;
+  letter-spacing: 8.5px;
+}
+.theme-container .section2 .select-theme{
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+.theme-container .section2 .select-theme p{
+  font-size: 11px;
+  letter-spacing: 2px;
+  font-weight: 100;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.section2 .select-theme .color-theme[type=range]{
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--very-dark-desaturated-blue-3);
+  cursor: pointer;
+  width: 75px;
+  height: 25px;
+  border-radius: 50px;
+  padding: 5px;
+}
+.section2 .select-theme .color-theme[type=range]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background: var(--red);
+}
+.section2 .select-theme .color-theme[type=range]::-webkit-slider-thumb:hover{
+  filter: brightness(2);
+}
+
+/*SECTION 2*/
+main .calc-container .result-container{
+  width: 100%;
+  height: 90px;
+  background-color: var(--very-dark-desaturated-blue-3);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  overflow: hidden;
+}
+main .calc-container .result-container p{
+  font-size: 40px;
+  margin-right: 25px;
+  color: var(--white);
+}
+
+/*SECTION 3*/
+main .calc-container .nums-container{
+  width: 100%;
+  height: 400px;
+  background-color: var(--very-dark-desaturated-blue-2);
+  color: var(--white);
+  margin-top: 25px;
+  border-radius: 10px;
+  padding: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 1fr;
+  gap: 5%;
+}
+
+main .calc-container .nums-container .nums{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--light-grayish-orange);
+  border-radius: 5px;
+  padding-top: 7px;
+  box-shadow: 0 4px 0 var(--grayish-orange);
+  cursor: pointer;
+}
+main .calc-container .nums-container .nums:hover{
+  filter: brightness(125%);
+}
+main .calc-container .nums-container .nums p{
+  font-size: 30px;
+  color: var(--very-dark-grayish-blue);
+  cursor: pointer;
+}
+main .calc-container .nums-container .text{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--desaturated-dark-blue-1);
+  border-radius: 5px;
+  box-shadow: 0 4px 0 var(--desaturated-dark-blue-2);
+  font-size: 20px;
+  cursor: pointer;
+}
+main .calc-container .nums-container .text:hover{
+  filter: brightness(125%);
+}
+main .calc-container .nums-container .reset{
+  grid-area: 5 / 1 / 6 / 3;
+}
+main .calc-container .nums-container .equal{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--red);
+  border-radius: 5px;
+  grid-area: 5 / 3 / 6 / 5;
+  box-shadow: 0 4px 0 var(--dark-red);
+  cursor: pointer;
+}
+main .calc-container .nums-container .equal:hover{
+  filter: brightness(125%);
+}
+
+/* ---- THEME 2 ---- */
+.theme2-main{
+  background-color: var(--very-light-gray);
+}
+.theme2-main .calc-container{
+  background-color: var(--very-light-gray);
+}
+/*SECTION 1*/
+.theme2-main .calc-container .theme-container{
+  color: var(--very-dark-grayish-yellow);
+}
+.theme2-main .section2 .select-theme .color-theme[type=range]{
+  background-color: var(--grayish-red);
+}
+.theme2-main .section2 .select-theme .color-theme[type=range]::-webkit-slider-thumb{
+  background-color: var(--orange);
+}
+/*SECTION 2*/
+.theme2-main .calc-container .result-container{
+  background-color: var(--white);
+}
+.theme2-main .calc-container .result-container p{
+  color: var(--very-dark-grayish-yellow);
+}
+/*SECTION 3*/
+.theme2-main .calc-container .nums-container{
+  background-color: var(--grayish-red);
+}
+.theme2-main .calc-container .nums-container .nums{
+  background-color: var(--very-light-gray);
+  box-shadow: 0 4px 0 var(--grayish-orange);
+}
+.theme2-main .calc-container .nums-container .nums p{
+  color: var(--very-dark-grayish-yellow);
+}
+.theme2-main .calc-container .nums-container .text{
+  background-color: var(--dark-moderate-cyan);
+  box-shadow: 0 4px 0 var(--Very-dark-cyan);
+}
+.theme2-main .calc-container .nums-container .equal{
+  background-color: var(--orange);
+  box-shadow: 0 4px 0 var(--dark-orange);
+}
+
+/* ---- THEME 3 ---- */
+.theme3-main{
+  background-color: var(--very-dark-violet-1);
+}
+.theme3-main .calc-container{
+  background-color: var(--very-dark-violet-1);
+}
+/*SECTION 1*/
+.theme3-main .calc-container .theme-container{
+  color: var(--light-yellow);
+}
+.theme3-main .section2 .select-theme .color-theme[type=range]{
+  background-color: var(--very-dark-violet-2);
+}
+.theme3-main .section2 .select-theme .color-theme[type=range]::-webkit-slider-thumb{
+  background-color: var(--pure-cyan);
+}
+/*SECTION 2*/
+.theme3-main .calc-container .result-container{
+  background-color: var(--very-dark-violet-2);
+}
+.theme3-main .calc-container .result-container p{
+  color: var(--light-yellow);
+}
+/*SECTION 3*/
+.theme3-main .calc-container .nums-container{
+  background-color: var(--very-dark-violet-2);
+}
+.theme3-main .calc-container .nums-container .nums{
+  background-color: var(--very-dark-violet);
+  box-shadow: 0 4px 0 var(--dark-magenta);
+}
+.theme3-main .calc-container .nums-container .nums p{
+  color: var(--light-yellow);
+}
+.theme3-main .calc-container .nums-container .text{
+  background-color: var(--dark-violet);
+  box-shadow: 0 4px 0 var(--vivid-magenta);
+}
+.theme3-main .calc-container .nums-container .equal{
+  background-color: var(--pure-cyan);
+  box-shadow: 0 4px 0 var(--soft-cyan);
+}
+
+/*THEME2*/
+.theme2-main .attribution p{
+  color: var(--very-dark-grayish-yellow);
+}
+.theme2-main .attribution p a{
+  color: var(--very-dark-grayish-yellow);
+}
+.theme2-main .attribution p a:hover{
+  color: var(--orange);
+}
+
+/*THEME3*/
+.theme3-main .attribution p{
+  color: var(--light-yellow);
+}
+.theme3-main .attribution p a{
+  color: var(--light-yellow);
+}
+.theme3-main .attribution p a:hover{
+  color: var(--soft-cyan);
+}
